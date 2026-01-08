@@ -22,6 +22,13 @@ if [ -d "$repo_root/.git" ]; then
   echo "Repo: $repo_root"
   git -C "$repo_root" rev-parse --abbrev-ref HEAD | awk '{print "Branch: " $0}'
   git -C "$repo_root" rev-parse --short HEAD | awk '{print "Commit: " $0}'
+  version_file="$repo_root/VERSION"
+  if [ -f "$version_file" ]; then
+    version=$(tr -d ' \t\r\n' < "$version_file")
+    if [ -n "$version" ]; then
+      echo "Version: $version"
+    fi
+  fi
 else
   repo_dir="${VIBE_SKILLS_HOME:-$HOME/.vibe-skills}"
   echo "Repo not found at: $repo_dir"

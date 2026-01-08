@@ -20,6 +20,13 @@ if (Test-Path (Join-Path $RepoRoot ".git")) {
   $commit = git -C $RepoRoot rev-parse --short HEAD
   Write-Output "Branch: $branch"
   Write-Output "Commit: $commit"
+  $versionFile = Join-Path $RepoRoot "VERSION"
+  if (Test-Path $versionFile) {
+    $version = (Get-Content $versionFile -Raw).Trim()
+    if ($version) {
+      Write-Output "Version: $version"
+    }
+  }
 } else {
   $RepoDir = if ($env:VIBE_SKILLS_HOME) { $env:VIBE_SKILLS_HOME } else { Join-Path $HOME ".vibe-skills" }
   Write-Output "Repo not found at: $RepoDir"
