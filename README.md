@@ -53,7 +53,10 @@ vibe doctor
 vibe list
 vibe prompts
 vibe go <goal>
+vibe sync <host>
 ```
+
+`vibe sync <host>` updates local and remote at once (SSH required).
 
 Notes:
 - One-liner uses a local clone at `~/.vibe-skills` by default.

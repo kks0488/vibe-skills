@@ -33,6 +33,17 @@ case "$cmd" in
     fi
     echo "끝까지: $*"
     ;;
+  sync)
+    if [ "$#" -lt 1 ]; then
+      echo "Usage: vibe sync <host> [host...]" >&2
+      exit 1
+    fi
+    sh "$repo_root/scripts/update-skills.sh"
+    for host in "$@"; do
+      echo "Updating $host"
+      ssh "$host" 'curl -fsSL https://raw.githubusercontent.com/kks0488/vibe-skills/main/bootstrap.sh | bash'
+    done
+    ;;
   help|*)
     cat <<'EOF'
 vibe commands:
@@ -43,6 +54,7 @@ vibe commands:
   uninstall  remove skills (backup)
   prompts    print author/reviewer prompts
   go         print a short finish-to-end prompt
+  sync       update local + remote host(s)
 EOF
     ;;
 esac

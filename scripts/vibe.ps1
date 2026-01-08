@@ -25,6 +25,17 @@ switch ($Command.ToLower()) {
     $goal = $Args -join " "
     Write-Output ("끝까지: " + $goal)
   }
+  "sync" {
+    if (-not $Args -or $Args.Length -eq 0) {
+      Write-Error "Usage: vibe sync <host> [host...]"
+      exit 1
+    }
+    & (Join-Path $RepoRoot "scripts/update-skills.ps1")
+    foreach ($host in $Args) {
+      Write-Output "Updating $host"
+      ssh $host "curl -fsSL https://raw.githubusercontent.com/kks0488/vibe-skills/main/bootstrap.sh | bash"
+    }
+  }
   default {
     @"
 vibe commands:
@@ -35,6 +46,7 @@ vibe commands:
   uninstall  remove skills (backup)
   prompts    print author/reviewer prompts
   go         print a short finish-to-end prompt
+  sync       update local + remote host(s)
 "@ | Write-Output
   }
 }
