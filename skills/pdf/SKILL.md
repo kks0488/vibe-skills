@@ -6,6 +6,14 @@ license: Proprietary. LICENSE.txt has complete terms
 
 # PDF Processing Guide
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 ## Overview
 
 This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see reference.md. If you need to fill out a PDF form, read forms.md and follow its instructions.

@@ -6,6 +6,14 @@ license: Proprietary. LICENSE.txt has complete terms
 
 # PPTX creation, editing, and analysis
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 ## Overview
 
 A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.

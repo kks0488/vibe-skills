@@ -6,6 +6,14 @@ license: Complete terms in LICENSE.txt
 
 # Web Artifacts Builder
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 To build powerful frontend claude.ai artifacts, follow these steps:
 1. Initialize the frontend repo using `scripts/init-artifact.sh`
 2. Develop your artifact by editing the generated code

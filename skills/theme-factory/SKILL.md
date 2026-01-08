@@ -7,6 +7,14 @@ license: Complete terms in LICENSE.txt
 
 # Theme Factory Skill
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 This skill provides a curated collection of professional font and color themes themes, each with carefully selected color palettes and font pairings. Once a theme is chosen, it can be applied to any artifact.
 
 ## Purpose

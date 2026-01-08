@@ -6,6 +6,14 @@ license: Complete terms in LICENSE.txt
 
 # MCP Server Development Guide
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 ## Overview
 
 Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.

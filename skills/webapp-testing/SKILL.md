@@ -6,6 +6,14 @@ license: Complete terms in LICENSE.txt
 
 # Web Application Testing
 
+## Vibe Defaults
+
+- Prefer fast iteration and shipping a working baseline over perfection.
+- Make safe default choices without pausing; record assumptions briefly.
+- Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
+- Keep outputs concise, actionable, and easy to extend.
+
+
 To test local web applications, write native Python Playwright scripts.
 
 **Helper Scripts Available**:
