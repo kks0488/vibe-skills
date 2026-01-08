@@ -30,26 +30,21 @@ git clone https://github.com/kks0488/vibe-skills.git; cd vibe-skills; .\scripts\
 
 Then in chat (examples — replace the request text, no `<goal>` needed):
 ```
-use vibe-router: 로그인페이지 만들어줘
+use vibe-router: build a login page
 ```
 or
 ```
-vibe go 로그인페이지 만들어줘
+vibe go build a login page
 ```
 or
 ```
-vibe finish 로그인페이지 만들어줘
+vibe finish build a login page
 ```
-or
+
+Korean shortcuts (optional):
 ```
 끝까지: 로그인페이지 만들어줘
-```
-or
-```
 그냥해줘: 로그인페이지 만들어줘
-```
-or
-```
 ㄱㄱ: 로그인페이지 만들어줘
 ```
 
@@ -60,17 +55,13 @@ vibe update
 vibe doctor
 vibe list
 vibe prompts
-vibe go <goal>
-vibe finish <goal>
-vibe sync <host>
+vibe go build a login page
+vibe finish build a login page
+vibe sync devbox
 ```
 
-Example:
-```
-vibe go 로그인페이지 만들어줘
-```
-
-`vibe sync <host>` updates local and remote at once (SSH required).
+`vibe sync devbox` updates local and remote at once (SSH required).
+Replace the request text and host name with your own.
 
 Notes:
 - One-liner uses a local clone at `~/.vibe-skills` by default.
@@ -126,7 +117,7 @@ bash scripts/uninstall-skills.sh
 2. Invoke a skill by name in chat:
    - `use vibe-phase-loop`
    - `$git-dual-terminal-loop`
-   - `use vibe-router: 로그인페이지 만들어줘`
+   - `use vibe-router: build a login page`
 3. Let the AI run; give feedback after the first pass.
 
 ## Zero-reading mode
@@ -134,7 +125,7 @@ bash scripts/uninstall-skills.sh
 If you do not know which skill to use, just say:
 
 ```
-use vibe-router: 로그인페이지 만들어줘
+use vibe-router: build a login page
 ```
 
 The AI will pick the right skill and run it with minimal questions.
@@ -142,9 +133,10 @@ The AI will pick the right skill and run it with minimal questions.
 If you want the AI to finish end-to-end without explaining, say:
 
 ```
-vibe finish 로그인페이지 만들어줘
+vibe finish build a login page
 ```
-or
+
+Korean shortcut (optional):
 ```
 아무것도 모르겠다. 로그인페이지 만들어줘 끝까지 해줘
 ```
