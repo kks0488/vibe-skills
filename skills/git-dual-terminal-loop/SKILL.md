@@ -27,7 +27,7 @@ description: Two-terminal workflow for vibe coding using Git as the single sourc
 
 ## Vibe Finish
 
-If the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", or "그냥해줘", auto-assign A/B roles, start the PR loop, and avoid mid-stream questions. Ask for approvals only after the first review pass.
+If the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", "걍해줘", or "ㄱㄱ", auto-assign A/B roles, start the PR loop, and avoid mid-stream questions. Ask for approvals only after the first review pass.
 
 ## Principles
 

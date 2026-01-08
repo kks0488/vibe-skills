@@ -40,6 +40,10 @@ or
 ```
 그냥해줘: <goal>
 ```
+or
+```
+ㄱㄱ: <goal>
+```
 
 Shortcut commands (after bootstrap):
 ```bash
@@ -48,6 +52,7 @@ vibe update
 vibe doctor
 vibe list
 vibe prompts
+vibe go "<goal>"
 ```
 
 Notes:

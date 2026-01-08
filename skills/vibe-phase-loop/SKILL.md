@@ -26,7 +26,7 @@ description: Phase-based planning and execution loop for vibe coding. Use when t
 
 ## Vibe Finish
 
-Use this when the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", or "마무리까지 해줘". Proceed end-to-end with no mid-stream questions; log assumptions and ask for confirmations only at the end.
+Use this when the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", "걍해줘", "ㄱㄱ", or "마무리까지 해줘". Proceed end-to-end with no mid-stream questions; log assumptions and ask for confirmations only at the end.
 
 
 ## Overview

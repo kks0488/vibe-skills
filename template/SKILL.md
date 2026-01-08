@@ -25,7 +25,7 @@ description: Replace with description of the skill and when Claude should use it
 
 ## Vibe Finish
 
-- If user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", or "그냥해줘", proceed end-to-end and ask questions only at the end.
+- If user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", "걍해줘", or "ㄱㄱ", proceed end-to-end and ask questions only at the end.
 
 ## Instructions
 

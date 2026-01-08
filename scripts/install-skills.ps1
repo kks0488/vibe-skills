@@ -18,4 +18,4 @@ Get-ChildItem $SrcDir -Directory | ForEach-Object {
 
 Write-Output "Installed skills to $DestDir"
 Write-Output "Backup suffix (if any): .bak-$timestamp"
-Write-Output "Next: use vibe-router: <goal>  (or '아무것도 모르겠다. <goal> 끝까지 해줘')"
+Write-Output "Next: 끝까지: <goal>  (or vibe go \"<goal>\")"

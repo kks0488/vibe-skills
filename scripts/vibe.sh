@@ -26,6 +26,13 @@ case "$cmd" in
   prompts)
     sh "$repo_root/scripts/role-prompts.sh" "${1:-all}"
     ;;
+  go)
+    if [ -z "${1:-}" ]; then
+      echo "Usage: vibe go \"<goal>\"" >&2
+      exit 1
+    fi
+    echo "끝까지: $*"
+    ;;
   help|*)
     cat <<'EOF'
 vibe commands:
@@ -35,6 +42,7 @@ vibe commands:
   list       list installed skills
   uninstall  remove skills (backup)
   prompts    print author/reviewer prompts
+  go         print a short finish-to-end prompt
 EOF
     ;;
 esac

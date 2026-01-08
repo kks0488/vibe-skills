@@ -13,6 +13,13 @@ switch ($Command.ToLower()) {
   "list" { & (Join-Path $RepoRoot "scripts/list-skills.ps1") }
   "uninstall" { & (Join-Path $RepoRoot "scripts/uninstall-skills.ps1") }
   "prompts" { & (Join-Path $RepoRoot "scripts/role-prompts.ps1") $Arg }
+  "go" {
+    if (-not $Arg) {
+      Write-Error "Usage: vibe go \"<goal>\""
+      exit 1
+    }
+    Write-Output ("끝까지: " + $Arg)
+  }
   default {
     @"
 vibe commands:
@@ -22,6 +29,7 @@ vibe commands:
   list       list installed skills
   uninstall  remove skills (backup)
   prompts    print author/reviewer prompts
+  go         print a short finish-to-end prompt
 "@ | Write-Output
   }
 }

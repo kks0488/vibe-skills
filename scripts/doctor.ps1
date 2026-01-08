@@ -1,3 +1,6 @@
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$RepoRoot = Resolve-Path (Join-Path $ScriptDir "..")
+
 $DestRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $SkillsDir = Join-Path $DestRoot "skills"
 
@@ -11,14 +14,14 @@ if (Test-Path $SkillsDir) {
   Write-Output "Skills dir not found: $SkillsDir"
 }
 
-$RepoDir = if ($env:VIBE_SKILLS_HOME) { $env:VIBE_SKILLS_HOME } else { Join-Path $HOME ".vibe-skills" }
-if (Test-Path (Join-Path $RepoDir ".git")) {
-  Write-Output "Repo: $RepoDir"
-  $branch = git -C $RepoDir rev-parse --abbrev-ref HEAD
-  $commit = git -C $RepoDir rev-parse --short HEAD
+if (Test-Path (Join-Path $RepoRoot ".git")) {
+  Write-Output "Repo: $RepoRoot"
+  $branch = git -C $RepoRoot rev-parse --abbrev-ref HEAD
+  $commit = git -C $RepoRoot rev-parse --short HEAD
   Write-Output "Branch: $branch"
   Write-Output "Commit: $commit"
 } else {
+  $RepoDir = if ($env:VIBE_SKILLS_HOME) { $env:VIBE_SKILLS_HOME } else { Join-Path $HOME ".vibe-skills" }
   Write-Output "Repo not found at: $RepoDir"
   Write-Output "Tip: set VIBE_SKILLS_HOME or run the bootstrap one-liner."
 }
@@ -29,4 +32,4 @@ if (Test-Path (Join-Path $SkillsDir "vibe-router")) {
   Write-Output "Core skill missing: vibe-router"
 }
 
-Write-Output "Next: use vibe-router: <goal>"
+Write-Output "Next: 끝까지: <goal>  (or vibe go \"<goal>\")"
