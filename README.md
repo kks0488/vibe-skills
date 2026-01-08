@@ -28,7 +28,7 @@ Windows (PowerShell):
 git clone https://github.com/kks0488/vibe-skills.git; cd vibe-skills; .\scripts\install-skills.ps1
 ```
 
-Then in chat (examples — replace the request text, no `<goal>` needed):
+Then in Codex chat (examples — replace the request text, no `<goal>` needed):
 ```
 use vibe-router: build a login page
 ```
@@ -44,6 +44,7 @@ vibe finish build a login page
 Difference:
 - `vibe go` = router mode (pick the best skill, minimal questions)
 - `vibe finish` = force end-to-end plan/execute/test with no mid-stream questions
+- Use `vibe finish` when you want the strongest, most hands-off loop.
 
 Korean shortcuts (optional):
 ```
