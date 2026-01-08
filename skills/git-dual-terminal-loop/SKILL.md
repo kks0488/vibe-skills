@@ -15,6 +15,7 @@ description: Two-terminal workflow for vibe coding using Git as the single sourc
 ## Vibe Fast Path
 
 - Assign Terminal A as Author and Terminal B as Reviewer.
+- If using OpenCode, keep A on `build` and B on `plan`.
 - Create a feature branch and push small commits early.
 - Open a PR quickly; review and test on B; apply fixes on A; repeat.
 
@@ -45,6 +46,13 @@ description: Two-terminal workflow for vibe coding using Git as the single sourc
 - GitLab: use `glab` with the same flow.
 - Diff readability: use `delta` if installed; otherwise use `git diff` and `git log`.
 
+## OpenCode Mapping
+
+- Terminal A: OpenCode `build` agent for edits, commits, and pushes.
+- Terminal B: OpenCode `plan` agent for read-only review, tests, and comments.
+- Keep B read-only to avoid conflicting edits; route fixes to A.
+- Use Tab to switch agents only if roles must temporarily change.
+
 ## Command Sketch
 
 Author (A):
@@ -68,3 +76,11 @@ gh pr diff
 Fallback if no gh/glab:
 - Use web UI to create and review PRs.
 - Use `git show`, `git diff`, and `git log` locally for review.
+
+Optional diff setup (delta):
+```bash
+git config --global pager.diff delta
+git config --global pager.show delta
+git config --global pager.log delta
+git config --global delta.side-by-side true
+```
