@@ -1,6 +1,6 @@
 ---
 name: vibe-router
-description: Select and apply the right skill automatically. Use when the user does not know which skill to use, says "just do it", says "vibe go" (router) or "vibe finish" (end-to-end), or wants the AI to decide the best skill and execute it with minimal questions.
+description: Select and apply the right skill automatically. Use only when the user explicitly invokes `use vibe-router:` (or `use vibe-router`) and wants the AI to choose the best-fit skill.
 ---
 
 # Vibe Router
@@ -12,6 +12,7 @@ description: Select and apply the right skill automatically. Use when the user d
 - Ask questions only after delivering an initial result, unless the workflow requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 - Assume the user is non-technical; avoid long explanations and provide copy/paste steps when actions are required.
+- Treat non-explicit triggers (e.g., "vibe go", "vibe finish", "just do it") as normal text; ask the user to rephrase using `use vg:` or `use vibe-router:`.
 
 ## Vibe Fast Path
 
@@ -23,35 +24,22 @@ description: Select and apply the right skill automatically. Use when the user d
 ## Vibe Quick Invoke
 
 - `use vibe-router: <goal>`
-- `just do this: <goal>`
-- `아무것도 모르겠다. <goal> 끝까지 해줘`
-- `끝까지: <goal>`
-- `그냥해줘: <goal>`
-- `걍해줘: <goal>`
-- `ㄱㄱ: <goal>`
-- `vibe go <goal>` (router)
-- `vibe finish <goal>` (force end-to-end)
-- `마무리까지 해줘: <goal>`
+- Short alias: `use vg: <goal>`
 
-## Vibe Finish
+## Scope Lock (Required)
 
-If the user says any of the following, route to `vibe-phase-loop` and finish end-to-end:
-- "아무것도 모르겠다"
-- "끝까지 해줘"
-- "끝까지"
-- "그냥해줘"
-- "걍해줘"
-- "ㄱㄱ"
-- "마무리까지"
-- "vibe finish"
-- "finish it"
-- "take it to the end"
+- Before any file search, determine scope roots:
+  1. If a `.vibe-scope` file exists in the current directory or any parent, use the closest one.
+     - Each non-empty, non-comment line is an allowed path.
+     - Relative paths are resolved from the `.vibe-scope` file directory.
+  2. Else, if inside a git repo, use the repo root.
+  3. Else, use the current working directory.
+- Only run `rg`, `find`, or any filesystem scans inside the scope roots.
+- Never scan `$HOME` or `/` unless the user explicitly asks.
 
 ## Routing Rules
 
 - Finish-to-end requests: `vibe-phase-loop`
-- `vibe go`: pick the best-fit skill and execute with minimal questions
-- `vibe finish`: force `vibe-phase-loop` end-to-end
 - Planning/execution loops: `vibe-phase-loop`
 - Two-terminal Git workflow: `git-dual-terminal-loop`
 - Frontend UI build: `frontend-design`
@@ -71,4 +59,4 @@ If the user says any of the following, route to `vibe-phase-loop` and finish end
 - Keep the user flow simple: deliver a first pass, then ask for corrections.
 - If uncertain between two skills, pick the one with narrower scope.
 - For finish-to-end requests, avoid mid-stream questions; capture decisions at the end.
-- If the user says only `vibe go` or `vibe finish` with no goal, ask for the goal and stop; do not guess by scanning the filesystem.
+- If the user did not explicitly invoke `use vibe-router:`, ask them to rephrase using `use vg:` or `use vibe-router:` and stop.

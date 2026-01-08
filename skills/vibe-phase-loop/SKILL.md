@@ -1,6 +1,6 @@
 ---
 name: vibe-phase-loop
-description: Phase-based planning and execution loop for vibe coding. Use when the user wants a 10/20-step plan, hands-off execution without mid-task questions, automatic default decisions, mandatory testing, and a post-test re-plan to fix issues or strengthen the solution.
+description: Phase-based planning and execution loop for vibe coding. Use only when the user explicitly invokes `use vibe-phase-loop:` (or `use vibe-phase-loop`) and wants a 10/20-step plan with testing and a post-test re-plan if needed.
 ---
 
 # Vibe Phase Loop
@@ -13,6 +13,7 @@ description: Phase-based planning and execution loop for vibe coding. Use when t
 - Keep outputs concise, actionable, and easy to extend.
 - Assume the user is non-technical; avoid long explanations and provide copy/paste steps when actions are required.
 - If no explicit goal is provided, ask a single clarifying question before planning; do not infer by scanning the filesystem.
+- Treat non-explicit triggers (e.g., "vibe finish", "끝까지") as normal text; ask the user to rephrase using `use vf:` or `use vibe-phase-loop:`.
 
 ## Vibe Fast Path
 
@@ -23,11 +24,18 @@ description: Phase-based planning and execution loop for vibe coding. Use when t
 ## Vibe Quick Invoke
 
 - `use vibe-phase-loop: build <feature> end-to-end`
-- `plan and execute <task> with testing`
+- Short alias: `use vf: <goal>`
 
-## Vibe Finish
+## Scope Lock (Required)
 
-Use this when the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", "걍해줘", "ㄱㄱ", "마무리까지 해줘", or "vibe finish". Proceed end-to-end with safe defaults and avoid mid-stream questions; ask for confirmations only at the end.
+- Before any file search, determine scope roots:
+  1. If a `.vibe-scope` file exists in the current directory or any parent, use the closest one.
+     - Each non-empty, non-comment line is an allowed path.
+     - Relative paths are resolved from the `.vibe-scope` file directory.
+  2. Else, if inside a git repo, use the repo root.
+  3. Else, use the current working directory.
+- Only run `rg`, `find`, or any filesystem scans inside the scope roots.
+- Never scan `$HOME` or `/` unless the user explicitly asks.
 
 ## Overview
 

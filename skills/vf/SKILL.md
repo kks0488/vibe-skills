@@ -1,6 +1,6 @@
 ---
 name: vf
-description: Short, explicit alias for vibe-phase-loop. Use when the user says "vf", "use vf", or wants the shortest reliable end-to-end plan/execute/test command.
+description: Short, explicit alias for vibe-phase-loop. Use only when the user explicitly invokes `use vf:` and wants the shortest reliable end-to-end plan/execute/test command.
 ---
 
 # VF (Vibe Finish Alias)
@@ -13,6 +13,7 @@ description: Short, explicit alias for vibe-phase-loop. Use when the user says "
 - Keep outputs concise, actionable, and easy to extend.
 - Assume the user is non-technical; avoid long explanations and provide copy/paste steps when actions are required.
 - If no explicit goal is provided, ask a single clarifying question before planning; do not infer by scanning the filesystem.
+- Treat non-explicit triggers (e.g., "vibe finish", "끝까지") as normal text; ask the user to rephrase using `use vf:`.
 
 ## Vibe Fast Path
 
@@ -23,6 +24,17 @@ description: Short, explicit alias for vibe-phase-loop. Use when the user says "
 ## Vibe Quick Invoke
 
 - `use vf: <goal>`
+
+## Scope Lock (Required)
+
+- Before any file search, determine scope roots:
+  1. If a `.vibe-scope` file exists in the current directory or any parent, use the closest one.
+     - Each non-empty, non-comment line is an allowed path.
+     - Relative paths are resolved from the `.vibe-scope` file directory.
+  2. Else, if inside a git repo, use the repo root.
+  3. Else, use the current working directory.
+- Only run `rg`, `find`, or any filesystem scans inside the scope roots.
+- Never scan `$HOME` or `/` unless the user explicitly asks.
 
 ## Overview
 

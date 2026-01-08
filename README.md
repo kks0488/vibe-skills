@@ -1,6 +1,6 @@
 # vibe-skills
 
-Version: v0.3.0
+Version: v0.3.1
 
 AI-first skills for vibe coding. Adapted from the official Claude skills set, tuned for fast autonomous loops in Codex and OpenCode. This repo is for my own day-to-day use (even if I am not a coder), not just for GitHub. Humans can skim; the AI does the reading and deciding.
 
@@ -46,26 +46,11 @@ or
 ```
 use vibe-phase-loop: build a login page
 ```
-Natural-language triggers (less reliable than `use ...:`):
-```
-vibe go build a login page
-```
-or
-```
-vibe finish build a login page
-```
+Natural-language triggers are intentionally disabled for reliability.
 
 Difference:
 - `use vg:` = router mode (pick the best skill, minimal questions)
 - `use vf:` = force end-to-end plan/execute/test with no mid-stream questions
-- `vibe go/finish` = natural-language triggers; use only if you accept occasional misrouting
-
-Korean shortcuts (optional):
-```
-끝까지: 로그인페이지 만들어줘
-그냥해줘: 로그인페이지 만들어줘
-ㄱㄱ: 로그인페이지 만들어줘
-```
 
 Shortcut commands (after bootstrap):
 ```bash
@@ -88,6 +73,18 @@ Notes:
 - One-liner uses a local clone at `~/.vibe-skills` by default.
 - Set `VIBE_SKILLS_HOME` if you want a custom location.
 - In Codex, you only need to say the line above; no extra setup.
+
+## Scope Lock (recommended)
+
+Create a `.vibe-scope` file in your project root to prevent accidental scans outside the project.
+Each non-empty, non-comment line is an allowed path (relative to the `.vibe-scope` location unless absolute).
+
+Example:
+```
+.
+apps
+services/api
+```
 
 ## Maintenance (optional)
 
@@ -157,11 +154,6 @@ If you want the AI to finish end-to-end without explaining, say:
 
 ```
 use vf: build a login page
-```
-
-Korean shortcut (optional):
-```
-아무것도 모르겠다. 로그인페이지 만들어줘 끝까지 해줘
 ```
 
 ## Copy/paste role prompts
