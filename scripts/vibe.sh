@@ -28,7 +28,7 @@ case "$cmd" in
     ;;
   go)
     if [ -z "${1:-}" ]; then
-      echo "Usage: vibe go \"<goal>\"" >&2
+      echo "Usage: vibe go <goal>" >&2
       exit 1
     fi
     echo "끝까지: $*"

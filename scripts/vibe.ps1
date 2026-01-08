@@ -1,6 +1,7 @@
 param(
   [string]$Command = "help",
-  [string]$Arg = ""
+  [Parameter(ValueFromRemainingArguments = $true)]
+  [string[]]$Args
 )
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -12,13 +13,17 @@ switch ($Command.ToLower()) {
   "doctor" { & (Join-Path $RepoRoot "scripts/doctor.ps1") }
   "list" { & (Join-Path $RepoRoot "scripts/list-skills.ps1") }
   "uninstall" { & (Join-Path $RepoRoot "scripts/uninstall-skills.ps1") }
-  "prompts" { & (Join-Path $RepoRoot "scripts/role-prompts.ps1") $Arg }
+  "prompts" {
+    $promptArg = if ($Args -and $Args.Length -gt 0) { $Args[0] } else { "all" }
+    & (Join-Path $RepoRoot "scripts/role-prompts.ps1") $promptArg
+  }
   "go" {
-    if (-not $Arg) {
-      Write-Error "Usage: vibe go \"<goal>\""
+    if (-not $Args -or $Args.Length -eq 0) {
+      Write-Error "Usage: vibe go <goal>"
       exit 1
     }
-    Write-Output ("끝까지: " + $Arg)
+    $goal = $Args -join " "
+    Write-Output ("끝까지: " + $goal)
   }
   default {
     @"

@@ -23,4 +23,4 @@ done
 
 echo "Installed skills to $dest_dir"
 echo "Backup suffix (if any): .bak-$timestamp"
-echo "Next: 끝까지: <goal>  (or vibe go \"<goal>\")"
+echo "Next: 끝까지: <goal>  (or vibe go <goal>)"

@@ -34,4 +34,4 @@ else
   echo "Core skill missing: vibe-router"
 fi
 
-echo "Next: 끝까지: <goal>  (or vibe go \"<goal>\")"
+echo "Next: 끝까지: <goal>  (or vibe go <goal>)"

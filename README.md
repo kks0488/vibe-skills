@@ -52,7 +52,7 @@ vibe update
 vibe doctor
 vibe list
 vibe prompts
-vibe go "<goal>"
+vibe go <goal>
 ```
 
 Notes:
