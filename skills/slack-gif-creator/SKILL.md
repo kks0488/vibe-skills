@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - Use simple shapes and high contrast for fast iteration.
 - Deliver a working GIF first; refine motion if asked.
 
+## Vibe Quick Invoke
+
+- `use slack-gif-creator: make a 128x128 GIF of <thing>`
+- `animate this idea for Slack`
+
 
 A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.
 

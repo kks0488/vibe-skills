@@ -17,6 +17,11 @@ license: Complete terms in LICENSE.txt
 - If audience is unclear, default to a general internal update.
 - Ask for missing facts after delivering the first draft.
 
+## Vibe Quick Invoke
+
+- `use internal-comms: draft a weekly update for <team>`
+- `write a 3P update for <project>`
+
 
 ## When to use this skill
 To write internal communications, use this skill for:

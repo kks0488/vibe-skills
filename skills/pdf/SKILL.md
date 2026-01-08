@@ -20,6 +20,11 @@ license: Proprietary. LICENSE.txt has complete terms
 - Use pypdf/pdfplumber for quick wins; avoid heavy transformations unless needed.
 - Deliver outputs and note any limitations or assumptions.
 
+## Vibe Quick Invoke
+
+- `use pdf: extract tables from <file>`
+- `use pdf: fill this form <file>`
+
 
 ## Overview
 

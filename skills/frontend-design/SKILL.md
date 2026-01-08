@@ -17,6 +17,11 @@ license: Complete terms in LICENSE.txt
 - Build a working baseline layout and polish only if requested.
 - Use practical defaults for typography and spacing; document assumptions.
 
+## Vibe Quick Invoke
+
+- `use frontend-design: build a landing page for <product>`
+- `design a bold UI for <app>`
+
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 

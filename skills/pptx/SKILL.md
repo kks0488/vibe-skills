@@ -20,6 +20,11 @@ license: Proprietary. LICENSE.txt has complete terms
 - Use a simple, readable layout and iterate after feedback.
 - If branding is unknown, pick a neutral palette and state the choice.
 
+## Vibe Quick Invoke
+
+- `use pptx: create a deck about <topic>`
+- `use pptx: edit <file> with <changes>`
+
 
 ## Overview
 

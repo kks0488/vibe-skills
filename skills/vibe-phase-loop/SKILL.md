@@ -19,6 +19,11 @@ description: Phase-based planning and execution loop for vibe coding. Use when t
 - Keep phases short; batch small changes to maintain momentum.
 - Only raise decisions that risk data loss or major rework.
 
+## Vibe Quick Invoke
+
+- `use vibe-phase-loop: build <feature> end-to-end`
+- `plan and execute <task> with testing`
+
 
 ## Overview
 

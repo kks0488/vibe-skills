@@ -19,6 +19,11 @@ description: Guide users through a structured workflow for co-authoring document
 - Assume a reasonable structure (Summary, Context, Proposal, Risks, Next Steps).
 - Ask for corrections only after the draft is delivered.
 
+## Vibe Quick Invoke
+
+- `use doc-coauthoring: draft a <doc type> about <topic>`
+- `write a spec for <feature>`
+
 
 This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing.
 

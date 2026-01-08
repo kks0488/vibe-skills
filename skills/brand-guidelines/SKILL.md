@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - If the artifact type is unclear, assume slides or a simple doc and proceed.
 - Use the primary accent (orange) unless context suggests a different accent.
 
+## Vibe Quick Invoke
+
+- `use brand-guidelines: apply brand styling to <artifact>`
+- `restyle this deck using Anthropic branding`
+
 
 ## Overview
 

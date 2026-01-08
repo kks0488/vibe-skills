@@ -20,6 +20,11 @@ description: Select and apply the right skill automatically. Use when the user d
 - Execute immediately; collect assumptions and questions for the end.
 - If the task is multi-step or open-ended, default to `vibe-phase-loop`.
 
+## Vibe Quick Invoke
+
+- `use vibe-router: <goal>`
+- `just do this: <goal>`
+
 ## Routing Rules
 
 - Planning/execution loops: `vibe-phase-loop`

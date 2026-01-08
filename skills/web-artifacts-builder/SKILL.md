@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - Defer advanced state or routing unless explicitly required.
 - Bundle a working HTML artifact first, then iterate.
 
+## Vibe Quick Invoke
+
+- `use web-artifacts-builder: build a multi-file React artifact for <goal>`
+- `create a shadcn UI artifact for <app>`
+
 
 To build powerful frontend claude.ai artifacts, follow these steps:
 1. Initialize the frontend repo using `scripts/init-artifact.sh`

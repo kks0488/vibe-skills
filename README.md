@@ -28,6 +28,16 @@ AI-first skills for vibe coding. Adapted from the official Claude skills set, tu
    - `use vibe-router: <goal>`
 3. Let the AI run; give feedback after the first pass.
 
+## Zero-reading mode
+
+If you do not know which skill to use, just say:
+
+```
+use vibe-router: <goal>
+```
+
+The AI will pick the right skill and run it with minimal questions.
+
 ## Copy/paste role prompts
 
 Mac/Linux:

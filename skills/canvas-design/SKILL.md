@@ -17,6 +17,11 @@ license: Complete terms in LICENSE.txt
 - Pick a bold visual direction quickly and produce one strong composition.
 - Deliver the first render, then note optional refinements.
 
+## Vibe Quick Invoke
+
+- `use canvas-design: poster for <theme>`
+- `make a single-page PNG from <idea>`
+
 
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 

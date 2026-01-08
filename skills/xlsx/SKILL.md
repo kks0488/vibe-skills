@@ -20,6 +20,11 @@ license: Proprietary. LICENSE.txt has complete terms
 - Use formulas and minimal formatting first; add polish later.
 - Surface assumptions and missing inputs after delivering the file.
 
+## Vibe Quick Invoke
+
+- `use xlsx: build a spreadsheet for <model>`
+- `use xlsx: edit <file> with <changes>`
+
 
 ## All Excel files
 

@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - Start with a minimal tool set covering core CRUD paths.
 - Provide a scaffold and a short TODO list for expansion.
 
+## Vibe Quick Invoke
+
+- `use mcp-builder: scaffold an MCP server for <api>`
+- `plan tools for <service>`
+
 
 ## Overview
 

@@ -20,6 +20,11 @@ description: Two-terminal workflow for vibe coding using Git as the single sourc
 - Create a feature branch and push small commits early.
 - Open a PR quickly; review and test on B; apply fixes on A; repeat.
 
+## Vibe Quick Invoke
+
+- `use git-dual-terminal-loop: start A/B workflow`
+- `set up author/reviewer loop for this repo`
+
 ## Principles
 
 - Use Git as the single source of truth for diffs, history, and attribution.

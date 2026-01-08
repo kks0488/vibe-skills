@@ -17,6 +17,11 @@ license: Complete terms in LICENSE.txt
 - Default to a single p5.js sketch with seeded randomness and 2-3 parameters.
 - Ship a working HTML+JS baseline first, then refine if asked.
 
+## Vibe Quick Invoke
+
+- `use algorithmic-art: generative art about <theme>`
+- `make a p5.js sketch with seed and 3 params`
+
 
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 

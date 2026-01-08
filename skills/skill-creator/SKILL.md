@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - Use init_skill.py defaults; avoid extra files until the core works.
 - Package only after a quick validation pass.
 
+## Vibe Quick Invoke
+
+- `use skill-creator: create a skill for <task>`
+- `update the <skill-name> skill`
+
 
 This skill provides guidance for creating effective skills.
 

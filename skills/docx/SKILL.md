@@ -20,6 +20,11 @@ license: Proprietary. LICENSE.txt has complete terms
 - Default to docx-js for new docs; use redlining for complex edits.
 - Deliver a first-pass document and list assumptions after.
 
+## Vibe Quick Invoke
+
+- `use docx: create <doc> with <content>`
+- `use docx: edit <file> with <changes>`
+
 
 ## Overview
 

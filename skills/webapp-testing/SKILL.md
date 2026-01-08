@@ -20,6 +20,11 @@ license: Complete terms in LICENSE.txt
 - Assert only critical UI elements before deeper flows.
 - Summarize findings and propose next tests after the first run.
 
+## Vibe Quick Invoke
+
+- `use webapp-testing: smoke test <local app>`
+- `test the UI flow for <page>`
+
 
 To test local web applications, write native Python Playwright scripts.
 
