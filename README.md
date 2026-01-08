@@ -28,6 +28,20 @@ AI-first skills for vibe coding. Adapted from the official Claude skills set, tu
    - `use vibe-router: <goal>`
 3. Let the AI run; give feedback after the first pass.
 
+## Copy/paste role prompts
+
+Mac/Linux:
+```bash
+bash scripts/role-prompts.sh author
+bash scripts/role-prompts.sh reviewer
+```
+
+Windows (PowerShell):
+```powershell
+.\scripts\role-prompts.ps1 author
+.\scripts\role-prompts.ps1 reviewer
+```
+
 ## Install on another PC
 
 Mac/Linux:
@@ -45,6 +59,18 @@ cd vibe-skills
 ```
 
 The installer copies all skills into `~/.codex/skills` (or `$CODEX_HOME/skills`) and keeps a timestamped backup if a skill already exists.
+
+## Update on any PC
+
+Mac/Linux:
+```bash
+bash scripts/update-skills.sh
+```
+
+Windows (PowerShell):
+```powershell
+.\scripts\update-skills.ps1
+```
 
 ## Recommended skills (vibe-first)
 

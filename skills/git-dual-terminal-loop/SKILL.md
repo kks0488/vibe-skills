@@ -78,6 +78,10 @@ Role: Terminal B (Reviewer).
 Rules: Do not edit code. Review diffs, run tests, and leave PR comments. Request changes from A.
 ```
 
+Script shortcut:
+- Mac/Linux: `bash scripts/role-prompts.sh author` and `bash scripts/role-prompts.sh reviewer`
+- Windows: `.\scripts\role-prompts.ps1 author` and `.\scripts\role-prompts.ps1 reviewer`
+
 ## Command Sketch
 
 Author (A):
