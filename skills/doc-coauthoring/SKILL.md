@@ -12,6 +12,12 @@ description: Guide users through a structured workflow for co-authoring document
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- If speed matters, skip staged questioning and draft a full first pass.
+- Assume a reasonable structure (Summary, Context, Proposal, Risks, Next Steps).
+- Ask for corrections only after the draft is delivered.
+
 
 This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing.
 

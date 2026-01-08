@@ -10,6 +10,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Default to a single-page PNG unless a PDF is explicitly requested.
+- Pick a bold visual direction quickly and produce one strong composition.
+- Deliver the first render, then note optional refinements.
+
 
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 

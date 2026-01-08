@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Start with a minimal React scaffold and implement the core flow only.
+- Defer advanced state or routing unless explicitly required.
+- Bundle a working HTML artifact first, then iterate.
+
 
 To build powerful frontend claude.ai artifacts, follow these steps:
 1. Initialize the frontend repo using `scripts/init-artifact.sh`

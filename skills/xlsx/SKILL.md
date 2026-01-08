@@ -13,6 +13,12 @@ license: Proprietary. LICENSE.txt has complete terms
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Default to a simple, correct model over a perfect one.
+- Use formulas and minimal formatting first; add polish later.
+- Surface assumptions and missing inputs after delivering the file.
+
 
 ## All Excel files
 

@@ -10,6 +10,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Pick a bold aesthetic direction immediately; do not ask for palette or fonts.
+- Build a working baseline layout and polish only if requested.
+- Use practical defaults for typography and spacing; document assumptions.
+
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 

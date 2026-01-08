@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Default to 128x128, 10 fps, 12-18 frames, 48 colors.
+- Use simple shapes and high contrast for fast iteration.
+- Deliver a working GIF first; refine motion if asked.
+
 
 A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.
 

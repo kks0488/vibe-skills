@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Apply brand colors and typography without waiting for confirmation.
+- If the artifact type is unclear, assume slides or a simple doc and proceed.
+- Use the primary accent (orange) unless context suggests a different accent.
+
 
 ## Overview
 

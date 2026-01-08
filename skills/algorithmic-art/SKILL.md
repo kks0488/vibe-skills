@@ -10,6 +10,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Choose a strong concept name and draft the philosophy in one pass.
+- Default to a single p5.js sketch with seeded randomness and 2-3 parameters.
+- Ship a working HTML+JS baseline first, then refine if asked.
+
 
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 

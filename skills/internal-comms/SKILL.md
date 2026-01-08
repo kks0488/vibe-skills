@@ -10,6 +10,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Choose the closest template automatically and draft immediately.
+- If audience is unclear, default to a general internal update.
+- Ask for missing facts after delivering the first draft.
+
 
 ## When to use this skill
 To write internal communications, use this skill for:
@@ -33,7 +39,7 @@ To write any internal communication:
     - `examples/general-comms.md` - For anything else that doesn't explicitly match one of the above
 3. **Follow the specific instructions** in that file for formatting, tone, and content gathering
 
-If the communication type doesn't match any existing guideline, ask for clarification or more context about the desired format.
+If the communication type doesn't match any existing guideline, default to `examples/general-comms.md`, draft immediately, and ask for confirmation after delivery.
 
 ## Keywords
 3P updates, company newsletter, company comms, weekly update, faqs, common questions, updates, internal comms

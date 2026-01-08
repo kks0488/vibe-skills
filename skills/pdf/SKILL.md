@@ -13,6 +13,12 @@ license: Proprietary. LICENSE.txt has complete terms
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Default to text extraction or simple operations first.
+- Use pypdf/pdfplumber for quick wins; avoid heavy transformations unless needed.
+- Deliver outputs and note any limitations or assumptions.
+
 
 ## Overview
 

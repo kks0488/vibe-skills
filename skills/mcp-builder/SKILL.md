@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Default to TypeScript with streamable HTTP unless specified otherwise.
+- Start with a minimal tool set covering core CRUD paths.
+- Provide a scaffold and a short TODO list for expansion.
+
 
 ## Overview
 

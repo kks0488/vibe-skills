@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Start with a minimal SKILL.md and add resources only if needed.
+- Use init_skill.py defaults; avoid extra files until the core works.
+- Package only after a quick validation pass.
+
 
 This skill provides guidance for creating effective skills.
 

@@ -13,6 +13,12 @@ license: Complete terms in LICENSE.txt
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Run a smoke test first (load, wait for networkidle, screenshot, console errors).
+- Assert only critical UI elements before deeper flows.
+- Summarize findings and propose next tests after the first run.
+
 
 To test local web applications, write native Python Playwright scripts.
 

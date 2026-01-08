@@ -12,6 +12,12 @@ description: Phase-based planning and execution loop for vibe coding. Use when t
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
 
+## Vibe Fast Path
+
+- Use this workflow by default when speed and autonomy are requested.
+- Keep phases short; batch small changes to maintain momentum.
+- Only raise decisions that risk data loss or major rework.
+
 
 ## Overview
 
