@@ -12,6 +12,7 @@ license: Proprietary. LICENSE.txt has complete terms
 - Make safe default choices without pausing; record assumptions briefly.
 - Ask questions only after delivering an initial result, unless the skill explicitly requires confirmation for safety/legal reasons.
 - Keep outputs concise, actionable, and easy to extend.
+- Assume the user is non-technical; avoid long explanations and provide copy/paste steps when actions are required.
 
 ## Vibe Fast Path
 
