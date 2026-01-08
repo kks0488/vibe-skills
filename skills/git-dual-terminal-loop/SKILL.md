@@ -40,6 +40,14 @@ description: Two-terminal workflow for vibe coding using Git as the single sourc
 6. Apply feedback on A with new commits and push.
 7. Repeat until approved; merge from A.
 
+## Performance Tips
+
+- Keep A and B in separate worktrees to avoid branch churn.
+- Use small commits (50-200 LOC) with one logical change each.
+- Open PRs early to start review in parallel.
+- Run a fast smoke test first, then expand if needed.
+- Summarize findings in PR comments with actionable next steps.
+
 ## Tooling
 
 - GitHub: use `gh` for PR create/view/diff/comment.
@@ -71,6 +79,12 @@ git checkout feature/<name>
 gh pr view
 gh pr diff
 # run tests, then comment in PR
+```
+
+Worktree setup (B):
+```bash
+git worktree add ../repo-review feature/<name>
+cd ../repo-review
 ```
 
 Fallback if no gh/glab:
