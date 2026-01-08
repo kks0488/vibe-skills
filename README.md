@@ -1,6 +1,6 @@
 # vibe-skills
 
-Version: v2026.01.09
+Version: v0.3.0
 
 AI-first skills for vibe coding. Adapted from the official Claude skills set, tuned for fast autonomous loops in Codex and OpenCode. This repo is for my own day-to-day use (even if I am not a coder), not just for GitHub. Humans can skim; the AI does the reading and deciding.
 
