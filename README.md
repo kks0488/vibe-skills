@@ -42,6 +42,32 @@ Notes:
 - Set `VIBE_SKILLS_HOME` if you want a custom location.
 - In Codex, you only need to say the line above; no extra setup.
 
+## Maintenance (optional)
+
+Check install:
+```bash
+bash scripts/doctor.sh
+```
+```powershell
+.\scripts\doctor.ps1
+```
+
+List skills:
+```bash
+bash scripts/list-skills.sh
+```
+```powershell
+.\scripts\list-skills.ps1
+```
+
+Uninstall (safe backup):
+```bash
+bash scripts/uninstall-skills.sh
+```
+```powershell
+.\scripts\uninstall-skills.ps1
+```
+
 ## Who this is for
 
 - Vibe coders who want outcomes fast
