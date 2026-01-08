@@ -20,6 +20,7 @@ switch ($Command.ToLower()) {
   { $_ -in @("go", "finish") } {
     if (-not $Args -or $Args.Length -eq 0) {
       Write-Error "Usage: vibe go <goal>  (or vibe finish <goal>)"
+      Write-Error "Example: vibe go 로그인페이지 만들어줘"
       exit 1
     }
     $goal = $Args -join " "

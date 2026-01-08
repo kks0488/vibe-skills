@@ -29,6 +29,7 @@ case "$cmd" in
   go|finish)
     if [ -z "${1:-}" ]; then
       echo "Usage: vibe go <goal>  (or vibe finish <goal>)" >&2
+      echo "Example: vibe go 로그인페이지 만들어줘" >&2
       exit 1
     fi
     echo "끝까지: $*"

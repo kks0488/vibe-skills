@@ -32,4 +32,5 @@ if (Test-Path (Join-Path $SkillsDir "vibe-router")) {
   Write-Output "Core skill missing: vibe-router"
 }
 
-Write-Output "Next: 끝까지: <goal>  (or vibe go <goal> / vibe finish <goal>)"
+Write-Output "Next: 끝까지: 원하는 목표를 적어줘 (예: 끝까지: 로그인페이지 만들어줘)"
+Write-Output "      or vibe go 로그인페이지 만들어줘 / vibe finish 로그인페이지 만들어줘"

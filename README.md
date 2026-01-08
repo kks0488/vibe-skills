@@ -28,29 +28,29 @@ Windows (PowerShell):
 git clone https://github.com/kks0488/vibe-skills.git; cd vibe-skills; .\scripts\install-skills.ps1
 ```
 
-Then in chat:
+Then in chat (examples — replace the request text, no `<goal>` needed):
 ```
-use vibe-router: <goal>
-```
-or
-```
-vibe go <goal>
+use vibe-router: 로그인페이지 만들어줘
 ```
 or
 ```
-vibe finish <goal>
+vibe go 로그인페이지 만들어줘
 ```
 or
 ```
-끝까지: <goal>
+vibe finish 로그인페이지 만들어줘
 ```
 or
 ```
-그냥해줘: <goal>
+끝까지: 로그인페이지 만들어줘
 ```
 or
 ```
-ㄱㄱ: <goal>
+그냥해줘: 로그인페이지 만들어줘
+```
+or
+```
+ㄱㄱ: 로그인페이지 만들어줘
 ```
 
 Shortcut commands (after bootstrap):
@@ -63,6 +63,11 @@ vibe prompts
 vibe go <goal>
 vibe finish <goal>
 vibe sync <host>
+```
+
+Example:
+```
+vibe go 로그인페이지 만들어줘
 ```
 
 `vibe sync <host>` updates local and remote at once (SSH required).
@@ -121,7 +126,7 @@ bash scripts/uninstall-skills.sh
 2. Invoke a skill by name in chat:
    - `use vibe-phase-loop`
    - `$git-dual-terminal-loop`
-   - `use vibe-router: <goal>`
+   - `use vibe-router: 로그인페이지 만들어줘`
 3. Let the AI run; give feedback after the first pass.
 
 ## Zero-reading mode
@@ -129,7 +134,7 @@ bash scripts/uninstall-skills.sh
 If you do not know which skill to use, just say:
 
 ```
-use vibe-router: <goal>
+use vibe-router: 로그인페이지 만들어줘
 ```
 
 The AI will pick the right skill and run it with minimal questions.
@@ -137,11 +142,11 @@ The AI will pick the right skill and run it with minimal questions.
 If you want the AI to finish end-to-end without explaining, say:
 
 ```
-vibe finish <goal>
+vibe finish 로그인페이지 만들어줘
 ```
 or
 ```
-아무것도 모르겠다. <goal> 끝까지 해줘
+아무것도 모르겠다. 로그인페이지 만들어줘 끝까지 해줘
 ```
 
 ## Copy/paste role prompts

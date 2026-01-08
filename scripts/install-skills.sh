@@ -23,4 +23,5 @@ done
 
 echo "Installed skills to $dest_dir"
 echo "Backup suffix (if any): .bak-$timestamp"
-echo "Next: 끝까지: <goal>  (or vibe go <goal> / vibe finish <goal>)"
+echo "Next: 끝까지: 원하는 목표를 적어줘 (예: 끝까지: 로그인페이지 만들어줘)"
+echo "      or vibe go 로그인페이지 만들어줘 / vibe finish 로그인페이지 만들어줘"
