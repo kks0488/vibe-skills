@@ -11,14 +11,14 @@ jobs:
   doctor-sh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run doctor.sh (strict)
         run: bash scripts/doctor.sh --strict
 
   doctor-ps1:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run doctor.ps1 (strict)
         run: pwsh -NoProfile -File scripts/doctor.ps1 -Strict
 
@@ -26,8 +26,8 @@ jobs:
     name: teams-e2e (node)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: "20"
       - name: Run vc-teams E2E tests
@@ -36,8 +36,8 @@ jobs:
   release-metadata:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Validate release metadata and skill copies
