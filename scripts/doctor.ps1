@@ -24,6 +24,7 @@ $CwdAgentsSkillsDir = Join-Path $Cwd ".agents\skills"
 $RepoRoot = $null
 $RepoSkillsDir = $null
 $RepoAgentsSkillsDir = $null
+$SourceSkillsDir = Join-Path $SkillsRepoRoot "skills"
 
 if (Get-Command git -ErrorAction SilentlyContinue) {
   $inRepo = git -C $Cwd rev-parse --is-inside-work-tree 2>$null
@@ -446,6 +447,8 @@ if (Test-Path (Join-Path $UserAgentsSkillsDir "vc-router")) {
   $coreSkill = $RepoSkillsDir
 } elseif ($RepoAgentsSkillsDir -and (Test-Path (Join-Path $RepoAgentsSkillsDir "vc-router"))) {
   $coreSkill = $RepoAgentsSkillsDir
+} elseif (Test-Path (Join-Path $SourceSkillsDir "vc-router")) {
+  $coreSkill = $SourceSkillsDir
 }
 
 if ($coreSkill) {
@@ -458,6 +461,7 @@ Test-SkillsDir $UserAgentsSkillsDir "user-agents"
 Test-SkillsDir $UserSkillsDir "user-legacy"
 Test-SkillsDir $CwdSkillsDir "repo-cwd"
 Test-SkillsDir $CwdAgentsSkillsDir "repo-cwd-agents"
+Test-SkillsDir $SourceSkillsDir "source"
 if ($RepoSkillsDir -and ($RepoSkillsDir -ne $CwdSkillsDir)) {
   Test-SkillsDir $RepoSkillsDir "repo-root"
 }
@@ -481,8 +485,8 @@ if ($legacySkills) {
   Write-Output "Warning: legacy vibe/vs skills detected: $legacyList"
   Write-Output "Tip: remove or rename legacy skills to avoid conflicts."
 }
-Write-Output "use vcg: build a login page"
-Write-Output "Tip: use ""vcf: ..."" for end-to-end (plan/execute/test)."
+Write-Output '$vcg build a login page'
+Write-Output 'Tip: use "$vcf ..." for end-to-end execution with verification.'
 
 if ($Strict -and $script:TotalSkillIssues -gt 0) {
   Write-Error ("ERROR: skill metadata issues detected: " + $script:TotalSkillIssues)

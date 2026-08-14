@@ -1,0 +1,22 @@
+{
+  "interface": {
+    "display_name": "VC Finish (vcf)",
+    "short_description": "Explicit alias for the evidence-first phase loop.",
+    "brand_color": "#EF4444",
+    "default_prompt": "Run the bounded VC phase loop and provide truthful verification evidence."
+  },
+  "policy": {
+    "allow_implicit_invocation": false
+  },
+  "dependencies": {
+    "tools": [
+      {
+        "type": "mcp",
+        "value": "openaiDeveloperDocs",
+        "description": "OpenAI Developer Docs (official)",
+        "transport": "streamable_http",
+        "url": "https://developers.openai.com/mcp"
+      }
+    ]
+  }
+}

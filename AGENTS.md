@@ -1,15 +1,17 @@
 # vibe-codex (Codex CLI)
 
-This repo is **Codex-first** and ships skills under `.codex/skills`.
+This repo is **Codex-first** and keeps distributable skill sources under `skills`.
 
 ## Repo conventions
 
 - Keep `scripts/*.sh` and `scripts/*.ps1` feature-parity (same subcommands + flags).
-- Skills live in `.codex/skills/<skill>/SKILL.md` (+ optional `agents/openai.yaml` UI metadata + dependency hints; optional legacy `SKILL.json`). Tip: keep `agents/openai.yaml` JSON-formatted (JSON ⊂ YAML) so doctor scripts can validate without extra deps.
-- Codex docs now prefer `.agents/skills`; this repo keeps `.codex/skills` as the canonical source and installers can target `.agents/skills` via `--agents`.
+- Skills live in `skills/<skill>/SKILL.md` (+ optional `agents/openai.yaml` UI metadata + dependency hints; optional legacy `SKILL.json`). Tip: keep `agents/openai.yaml` JSON-formatted (JSON ⊂ YAML) so doctor scripts can validate without extra deps.
+- Current OpenAI documentation lists `.agents/skills` for local discovery. New installs should target `.agents/skills` via `--agents`; the root `skills` directory also supports plugin packaging.
 - For `SKILL.md` YAML frontmatter, keep `name` ≤ 64, `description` ≤ 1024, and `metadata.short-description` ≤ 1024.
 - When changing skills, keep `SKILL.md` ↔ `agents/openai.yaml` (and `SKILL.json` if present) aligned and run `bash scripts/doctor.sh`.
 - Avoid creating backup folders inside any skills directory (Codex loads skills recursively and backups can become duplicate skills).
+- Do not describe `vc teams` as Codex-native. It is a persistent mailbox companion; built-in Codex subagents perform actual in-session delegation.
+- Do not add guaranteed-success, infinite-retry, or never-ask instructions. Use bounded recovery and truthful blockers.
 
 ## OpenAI docs
 

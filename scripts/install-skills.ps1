@@ -1,6 +1,6 @@
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RepoRoot = Resolve-Path (Join-Path $ScriptDir "..")
-$SrcDir = Join-Path $RepoRoot ".codex\\skills"
+$SrcDir = Join-Path $RepoRoot "skills"
 $CoreSkillsFile = Join-Path $ScriptDir "core-skills.txt"
 
 function Show-Usage {
@@ -127,6 +127,6 @@ if ($legacySkills) {
   Write-Output "Warning: legacy vibe/vs skills detected: $legacyList"
   Write-Output "Tip: remove or rename legacy skills to avoid conflicts."
 }
-Write-Output "use vcg: build a login page"
-Write-Output "Tip: use ""vcf: ..."" for end-to-end (plan/execute/test)."
+Write-Output '$vcg build a login page'
+Write-Output 'Tip: use "$vcf ..." for end-to-end execution with verification.'
 Write-Output "Tip: vc mcp docs  (install OpenAI developer docs MCP server)."

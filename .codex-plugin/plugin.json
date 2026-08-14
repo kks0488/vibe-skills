@@ -1,0 +1,19 @@
+{
+  "name": "vibe-codex",
+  "version": "0.5.0",
+  "description": "Evidence-first workflow skills and durable coordination utilities for Codex",
+  "author": {
+    "name": "Kyoungsoo Kim",
+    "url": "https://github.com/kks0488"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vibe Codex",
+    "shortDescription": "Evidence-first workflows for Codex.",
+    "longDescription": "Adaptive planning, bounded recovery, verification, and optional durable mailbox coordination for Codex workflows.",
+    "developerName": "Kyoungsoo Kim",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "defaultPrompt": "Choose the smallest suitable Vibe Codex workflow and complete the task with verification evidence."
+  }
+}

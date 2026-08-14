@@ -109,7 +109,13 @@ function sanitizeName(value) {
     .replace(/[^a-z0-9._-]+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
-  if (!normalized) {
+  if (
+    !normalized ||
+    normalized === "." ||
+    normalized === ".." ||
+    normalized.length > 64 ||
+    !/^[a-z0-9][a-z0-9._-]*$/.test(normalized)
+  ) {
     throw new Error(`Invalid name: "${value}"`);
   }
   return normalized;

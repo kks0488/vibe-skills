@@ -4,6 +4,9 @@ on:
   pull_request:
   push:
 
+permissions:
+  contents: read
+
 jobs:
   doctor-sh:
     runs-on: ubuntu-latest
@@ -29,3 +32,13 @@ jobs:
           node-version: "20"
       - name: Run vc-teams E2E tests
         run: node --test scripts/vc-teams.test.mjs
+
+  release-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate release metadata and skill copies
+        run: python scripts/validate-release.py

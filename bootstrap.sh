@@ -15,7 +15,7 @@ else
   exit 1
 fi
 
-sh "$dest/scripts/install-skills.sh"
+sh "$dest/scripts/install-skills.sh" --agents
 
 bin_dir="${XDG_BIN_DIR:-}"
 if [ -z "$bin_dir" ]; then

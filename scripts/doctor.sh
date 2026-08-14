@@ -44,6 +44,7 @@ cwd_agents_skills_dir="$cwd/.agents/skills"
 repo_root=""
 repo_skills_dir=""
 repo_agents_skills_dir=""
+source_skills_dir="$skills_repo_root/skills"
 
 if command -v git >/dev/null 2>&1; then
   if git -C "$cwd" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -456,6 +457,8 @@ elif [ -n "$repo_skills_dir" ] && [ -d "$repo_skills_dir/vc-router" ]; then
   core_skill="$repo_skills_dir"
 elif [ -n "$repo_agents_skills_dir" ] && [ -d "$repo_agents_skills_dir/vc-router" ]; then
   core_skill="$repo_agents_skills_dir"
+elif [ -d "$source_skills_dir/vc-router" ]; then
+  core_skill="$source_skills_dir"
 fi
 
 if [ -n "$core_skill" ]; then
@@ -468,6 +471,7 @@ validate_skills_dir "$user_agents_skills_dir" "user-agents"
 validate_skills_dir "$user_skills_dir" "user-legacy"
 validate_skills_dir "$cwd_skills_dir" "repo-cwd"
 validate_skills_dir "$cwd_agents_skills_dir" "repo-cwd-agents"
+validate_skills_dir "$source_skills_dir" "source"
 if [ -n "$repo_skills_dir" ] && [ "$repo_skills_dir" != "$cwd_skills_dir" ]; then
   validate_skills_dir "$repo_skills_dir" "repo-root"
 fi
@@ -487,8 +491,8 @@ if [ -n "$legacy_skills" ]; then
   echo "Warning: legacy vibe/vs skills detected: $legacy_skills"
   echo "Tip: remove or rename legacy skills to avoid conflicts."
 fi
-echo "use vcg: build a login page"
-echo "Tip: use \"vcf: ...\" for end-to-end (plan/execute/test)."
+echo '$vcg build a login page'
+echo 'Tip: use "$vcf ..." for end-to-end execution with verification.'
 
 if [ "$strict" = "true" ] && [ "$total_skill_issues" -ne 0 ]; then
   echo "ERROR: skill metadata issues detected: $total_skill_issues" >&2

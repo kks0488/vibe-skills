@@ -292,3 +292,20 @@ test("await matches requestId and times out when missing", async () => {
   await run(["remove-member", "--team", team, "--name", "worker"], env);
   await run(["delete", "--name", team], env);
 });
+
+test("team names cannot escape the configured teams directory", async () => {
+  const env = await setupEnv();
+
+  await assert.rejects(
+    run(["create", "--name", ".."], env),
+    /Invalid name/
+  );
+  await assert.rejects(
+    run(["delete", "--name", "..", "--force", "true"], env),
+    /Invalid name/
+  );
+  await assert.rejects(
+    run(["create", "--name", "a".repeat(65)], env),
+    /Invalid name/
+  );
+});

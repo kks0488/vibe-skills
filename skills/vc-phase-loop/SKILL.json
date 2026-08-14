@@ -1,0 +1,19 @@
+{
+  "interface": {
+    "display_name": "VC Phase Loop",
+    "short_description": "Adaptive plan, execute, recover, and verify workflow.",
+    "brand_color": "#EF4444",
+    "default_prompt": "Execute end-to-end with task-sized planning, bounded recovery, proportional tests, and truthful completion evidence."
+  },
+  "dependencies": {
+    "tools": [
+      {
+        "type": "mcp",
+        "value": "openaiDeveloperDocs",
+        "description": "OpenAI Developer Docs (official)",
+        "transport": "streamable_http",
+        "url": "https://developers.openai.com/mcp"
+      }
+    ]
+  }
+}

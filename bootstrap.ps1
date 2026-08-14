@@ -12,7 +12,7 @@ if (Get-Command git -ErrorAction SilentlyContinue) {
   exit 1
 }
 
-& (Join-Path $Dest "scripts/install-skills.ps1")
+& (Join-Path $Dest "scripts/install-skills.ps1") --agents
 
 $BinDir = Join-Path $Dest "bin"
 New-Item -ItemType Directory -Force -Path $BinDir | Out-Null

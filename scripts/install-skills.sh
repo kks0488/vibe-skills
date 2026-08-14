@@ -3,7 +3,7 @@ set -eu
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 skills_repo_root=$(cd "$script_dir/.." && pwd)
-src_dir="$skills_repo_root/.codex/skills"
+src_dir="$skills_repo_root/skills"
 core_skills_file="$script_dir/core-skills.txt"
 
 usage() {
@@ -132,6 +132,6 @@ if [ -n "$legacy_skills" ]; then
   echo "Warning: legacy vibe/vs skills detected: $legacy_skills"
   echo "Tip: remove or rename legacy skills to avoid conflicts."
 fi
-echo "use vcg: build a login page"
-echo "Tip: use \"vcf: ...\" for end-to-end (plan/execute/test)."
+echo '$vcg build a login page'
+echo 'Tip: use "$vcf ..." for end-to-end execution with verification.'
 echo "Tip: vc mcp docs  (install OpenAI developer docs MCP server)."

@@ -1,0 +1,19 @@
+{
+  "interface": {
+    "display_name": "VC Router",
+    "short_description": "Routes a request to the smallest suitable VC workflow.",
+    "brand_color": "#3B82F6",
+    "default_prompt": "Choose one minimal workflow for this request, or continue directly when no VC skill adds value."
+  },
+  "dependencies": {
+    "tools": [
+      {
+        "type": "mcp",
+        "value": "openaiDeveloperDocs",
+        "description": "OpenAI Developer Docs (official)",
+        "transport": "streamable_http",
+        "url": "https://developers.openai.com/mcp"
+      }
+    ]
+  }
+}

@@ -1,32 +1,29 @@
 ---
-name: template-skill
-description: Replace with description of the skill and when Claude should use it.
+name: replace-me
+description: State the specific task this skill handles, when it should trigger, and when it should not.
 ---
 
-# Template Skill
+# Replace Me
 
-## VC Defaults
+## Goal
 
-- Prefer fast iteration and shipping a working baseline over perfection.
-- Make safe default choices without pausing; record assumptions briefly.
-- Ask questions only after delivering an initial result, unless the workflow requires confirmation for safety/legal reasons.
-- Keep outputs concise, actionable, and easy to extend.
-- Assume the user is non-technical; avoid long explanations and provide copy/paste steps when actions are required.
+State the concrete outcome this skill should produce.
 
-## VC Fast Path
+## Inputs
 
-- Decide the simplest viable approach and execute immediately.
-- Deliver a first pass before asking for corrections.
-- Collect assumptions and questions for the end.
+- List required inputs.
+- Identify optional inputs and safe defaults.
 
-## VC Quick Invoke
+## Workflow
 
-- `use <skill-name>: <goal>`
+1. Confirm scope and applicable repository instructions.
+2. Inspect only the sources required for the task.
+3. Execute the smallest suitable workflow.
+4. Verify the result with checks proportional to risk.
+5. Report evidence, assumptions, and any remaining blockers.
 
-## VC Finish
+## Safety boundaries
 
-Use this when the user says "아무것도 모르겠다", "끝까지 해줘", "끝까지", "그냥해줘", "걍해줘", "ㄱㄱ", "마무리까지 해줘", or "vc finish". Proceed end-to-end with safe defaults and avoid mid-stream questions; ask for confirmations only at the end.
-
-## Instructions
-
-Replace this section with the skill's actual workflow and resources.
+- Do not expand scope or authority implicitly.
+- Ask before irreversible, costly, credential-sensitive, or externally consequential actions.
+- After the same failure twice, change the approach instead of repeating it.

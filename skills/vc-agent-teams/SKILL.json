@@ -1,0 +1,19 @@
+{
+  "interface": {
+    "display_name": "VC Agent Teams",
+    "short_description": "Durable local mailbox coordination for Codex workflows.",
+    "brand_color": "#0EA5A4",
+    "default_prompt": "Use vc teams only for durable mailbox coordination; prefer built-in Codex subagents for normal in-session delegation."
+  },
+  "dependencies": {
+    "tools": [
+      {
+        "type": "mcp",
+        "value": "openaiDeveloperDocs",
+        "description": "OpenAI Developer Docs (official)",
+        "transport": "streamable_http",
+        "url": "https://developers.openai.com/mcp"
+      }
+    ]
+  }
+}

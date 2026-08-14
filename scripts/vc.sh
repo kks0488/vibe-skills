@@ -82,9 +82,9 @@ EOF
     fi
     echo "Copy/paste into Codex chat:" >&2
     if [ "$cmd" = "go" ]; then
-      echo "use vcg: $*"
+      printf '$vcg %s\n' "$*"
     else
-      echo "vcf: $*"
+      printf '$vcf %s\n' "$*"
     fi
     ;;
   teams)
@@ -119,8 +119,8 @@ vc commands:
   uninstall  remove skills (backup; supports --repo/--path/--agents)
   prune      remove legacy removed skills (backup; supports --repo/--path/--agents)
   prompts    print author/reviewer prompts
-  go         router mode (prints "use vcg: ...")
-  finish     end-to-end mode (prints "vcf: ...")
+  go         router mode (prints "$vcg ...")
+  finish     end-to-end mode (prints "$vcf ...")
   sync       update local + remote host(s)
 EOF
     ;;

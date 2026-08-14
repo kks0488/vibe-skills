@@ -1,0 +1,37 @@
+name: Bug report
+description: Report incorrect or unsafe Vibe Codex behavior
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private prompts, or local mailbox contents.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+    validations:
+      required: true
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex version
+      placeholder: codex-cli x.y.z
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Linux
+        - Windows
+    validations:
+      required: true
+

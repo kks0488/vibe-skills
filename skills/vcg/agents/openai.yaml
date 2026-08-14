@@ -1,0 +1,22 @@
+{
+  "interface": {
+    "display_name": "VC Go (vcg)",
+    "short_description": "Explicit alias for the VC workflow router.",
+    "brand_color": "#3B82F6",
+    "default_prompt": "Select one minimal VC workflow and proceed within the user's scope and authority."
+  },
+  "policy": {
+    "allow_implicit_invocation": false
+  },
+  "dependencies": {
+    "tools": [
+      {
+        "type": "mcp",
+        "value": "openaiDeveloperDocs",
+        "description": "OpenAI Developer Docs (official)",
+        "transport": "streamable_http",
+        "url": "https://developers.openai.com/mcp"
+      }
+    ]
+  }
+}
